@@ -15,22 +15,18 @@ class Player {
   moveLeft() {
     this.positionX--;
     this.thePlayer.style.left = this.positionX + "vw";
-    this.coin();
   }
   moveRight() {
     this.positionX++;
     this.thePlayer.style.left = this.positionX + "vw";
-    this.coin();
   }
   moveDown() {
     this.positionY--;
     this.thePlayer.style.bottom = this.positionY + "vh";
-    this.coin();
   }
   moveUp() {
     this.positionY++;
     this.thePlayer.style.bottom = this.positionY + "vh";
-    this.coin();
   }
 }
 
@@ -72,7 +68,7 @@ class Money {
     this.theMoney.style.height = this.height + "vh";
     this.theMoney.style.left = this.positionX + "vw";
     this.theMoney.style.bottom = this.positionY + "vh";
-    this.theMoney.style.borderRadius = 25 + "px";
+    this.theMoney.style.borderRadius = "25px";
 
     const parentElm = document.getElementById("skyview");
     parentElm.appendChild(this.theMoney);
@@ -83,6 +79,9 @@ function createCoin() {
   const coin = new Money();
   allTheCoins.push(coin);
 }
+
+let score = 0
+let scoreElm = document.createElement("h2");
 
 function checkCollison() {
   for (let i = allTheCoins.length - 1; i >= 0; i--) {
@@ -97,12 +96,21 @@ function checkCollison() {
       console.log(coin);
       coin.theMoney.remove();
       allTheCoins.splice(i, 1);
+      score += 10;
+      updateScore();
+      console.log("score " + score);
     }
   }
 }
+
+function updateScore() {
+  scoreElm.innerHTML = `money gathered: $${score}`;
+}
+
+document.body.appendChild(scoreElm);
 
 const myGameInterval = setInterval(() => {
   checkCollison();
 }, 100);
 
-const coinInterval = setInterval(createCoin, 1000);
+const coinInterval = setInterval(createCoin, 500);
