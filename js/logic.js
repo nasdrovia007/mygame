@@ -28,7 +28,10 @@ class Player {
     this.positionY++;
     this.thePlayer.style.bottom = this.positionY + "vh";
   }
-}
+  moveUpLeft(){
+    this.moveUp()
+    this.moveLeft()
+  }}
 
 const jimmy = new Player();
 const allTheCoins = [];
@@ -47,6 +50,8 @@ document.addEventListener("keydown", (e) => {
     case "ArrowDown":
       jimmy.moveDown();
       break;
+      case "ArrowUp" + "ArrowLeft":
+        jimmy.moveUpLeft()
   }
 });
 
