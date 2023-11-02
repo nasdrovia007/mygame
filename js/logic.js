@@ -111,7 +111,9 @@ function checkCollison() {
 function updateScore() {
   scoreElm.innerHTML = `money gathered: $${score}`;
 }
-
+function getScore (){
+ return score 
+}
 document.body.appendChild(scoreElm);
 
 const myGameInterval = setInterval(() => {
@@ -119,3 +121,9 @@ const myGameInterval = setInterval(() => {
 }, 100);
 
 const coinInterval = setInterval(createCoin, 500);
+
+
+setInterval(() => {
+location.href = "/thetable.html"
+}, 5000 )
+
