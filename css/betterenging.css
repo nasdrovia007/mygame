@@ -1,7 +1,32 @@
-body{
+body {
     background-color: red;
-}
-
-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 {
     color: gold;
-}
+    align-self: center;
+    font-style: oblique;
+    font-size: 50px;
+    text-decoration: underline;
+  }
+  
+  div {
+    color: gold;
+    font-size: 25px;
+    align-self: center;
+  }
+  
+  img {
+    width: 50%;
+    margin-top: 20px;
+  }
+  
+  a {
+    font-size: 2em;
+    align-self: center;
+    padding-top: 25px;
+  }
+  

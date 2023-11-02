@@ -29,7 +29,7 @@ class Player {
     this.thePlayer.style.bottom = this.positionY + "vh";
   }
   moveUpLeft(){
-    this.moveUp()
+    this.moveUp()    //possibly implementing diagonal movement
     this.moveLeft()
   }}
 
@@ -125,5 +125,5 @@ const coinInterval = setInterval(createCoin, 500);
 
 setInterval(() => {
 location.href = "/thetable.html"
-}, 5000 )
+}, 30000 )
 
