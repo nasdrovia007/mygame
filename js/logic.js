@@ -1,6 +1,6 @@
 const audio = new Audio('./bgm/streetost.mp3')
 audio.loop = true
-audio.play()
+
 
 class Player {
   constructor() {
@@ -15,6 +15,7 @@ class Player {
     this.thePlayer.style.left = this.positionX + "vw";
     this.thePlayer.style.bottom = this.positionY + "vh";
     this.coins = [];
+    audio.play()
   }
   moveLeft() {
     this.positionX--;
@@ -131,5 +132,5 @@ setInterval(() => {
   audio.pause()
   audio.currentTime = 0
 location.href = "./thetable.html"
-}, 5000 )
+}, 40000 )
 
