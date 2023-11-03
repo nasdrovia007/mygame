@@ -50,11 +50,11 @@ rollBtn.addEventListener("click", function () {
     consecutiveLows = 0;
   }
 
-  if (consecutiveHighs === 3) {
+  if (consecutiveHighs === 4) {
     location.href = "./betterending.html";
   }
 
-  if (consecutiveLows === 3) {
+  if (consecutiveLows === 4) {
     location.href = "./goodending.html";
   }
 });

@@ -124,6 +124,6 @@ const coinInterval = setInterval(createCoin, 500);
 
 
 setInterval(() => {
-location.href = "/thetable.html"
-}, 30000 )
+location.href = "./thetable.html"
+}, 40000 )
 
