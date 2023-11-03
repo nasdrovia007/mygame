@@ -1,3 +1,7 @@
+const audio = new Audio('./bgm/streetost.mp3')
+audio.loop = true
+audio.play()
+
 class Player {
   constructor() {
     this.width = 5;
@@ -124,6 +128,8 @@ const coinInterval = setInterval(createCoin, 500);
 
 
 setInterval(() => {
+  audio.pause()
+  audio.currentTime = 0
 location.href = "./thetable.html"
-}, 40000 )
+}, 5000 )
 
